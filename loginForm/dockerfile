@@ -1,0 +1,7 @@
+From alpine:latest  alpine sghira bzaf ha elash meneha aninstanciew image psq hna les images dlana bghena kulshy ykhdem bzaf w ubuntu t9el w kber ha elash khdemena b alpine .
+RUN apt-get update 
+RUN apt-get install -y nginx
+WORKDIR /usr/share/nginx/html
+COPY C:\Users\dell xps\Documents\bestfrontendprojects\loginForm /usr/share/nginx/html 
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

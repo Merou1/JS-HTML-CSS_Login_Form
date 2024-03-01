@@ -1,0 +1,267 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+body
+a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100 ;
+    padding: 0 20px;
+    
+}   
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    
+} 
+.navLogo{
+    color: wheat;
+}
+.navLogo:hover{
+    color: black;
+}
+.navLogo:active{
+    color: wheat;
+}
+.nav,.navItem,.button
+.navItems{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items:center ;
+    justify-content:space-between ;
+}
+/* {} */
+.navItem{
+    justify-content: center;
+    align-items: center;
+}
+.navItem .navLink {
+    margin-right: 20px;
+    color: white;
+}
+.button{
+    padding: 6px 24px;
+    border : 2px solid white;
+    background: transparent;
+    border-radius: 6px;
+    cursor:pointer;
+    color: white;
+}
+
+
+button:active{
+    transform: scale(0.98);
+}
+/*positios:relative absolute... 100% 100px 100vh...transform transition, imta kandirou : w .
+b7al class.hover or class:active*/
+.home{
+    background-image: url(Design\ sans\ titre\ \(1\).png);
+    position: relative;
+    height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    
+
+}/* {} */
+.formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element */
+    max-width: 320px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 10px 3px 100px  ;
+    background: white;
+    display: none;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+    
+}
+/* Show class for smooth transition and opacity */
+.home.show .formContainer {
+    display: block;
+    opacity: 1;
+    pointer-events:auto;
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+  
+    
+}
+
+
+.formClose{
+   float: right;
+   color: #0b0217;
+   font-size: 22px;
+   opacity: 0.7;
+   cursor: pointer;
+   float: right;
+
+     
+}
+
+.formContainer h2{
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+    
+ }
+ .inputBox{
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+  
+ }
+ .inputBox input{
+    height: 100%;
+    padding: 0 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom:1.5px solid #aaaaaa ;
+   }
+   .inputBox i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+   }
+   .inputBox i.email,.inputBox i.password{
+   left: 0;
+   }/* {} */
+   .inputBox i.pw_hide{
+    right: 0;
+    font-size: 18px;
+
+   }
+   .forgetpw{
+    color: #7d2ac8;
+    
+   }
+   .forgetpw:hover{
+text-decoration: underline;    
+   }
+   .optionField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+   }
+   .checkbox{
+    display: flex;
+    white-space: nowrap;
+    column-gap: 8px;
+   }
+   .checkbox label{
+    cursor: pointer;
+    user-select: none;
+
+   } 
+  .formContainer .loginNow{
+    background-color: #7d2ac8;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    border-color: #7d2ac8;
+    margin-top: 30px;
+    border: 0;
+    padding: 10px;
+   }
+   .loginNow:hover{
+    background-color: #751bc4;
+   }
+   .formContainer .signupNow{
+    background-color: #7d2ac8;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    border-color: #7d2ac8;
+    margin-top: 30px;
+    border: 0;
+    padding: 10px;
+   }
+   .signupNow:hover{
+    background-color: #751bc4;
+   }
+   #signup{
+    color: #7d2ac8;
+   }
+   #signup:hover{
+    text-decoration: underline; 
+  } 
+  #signin{
+    color: #7d2ac8;
+   }
+   #signin:hover{
+    text-decoration: underline; 
+  } 
+  
+   .loginSignup{
+    text-align: center;
+    margin-top: 15px;
+   } 
+   .signupForm{
+   display: none;
+   } 
+   .formContainer.active .signupForm{
+    display: block;
+
+}
+.formContainer.active .login_form{
+    display: none;
+}
+.forgetpass{
+    display: none;
+}
+.see{
+    display: block;
+}
+.forgetpass.see {
+    display: block;
+}
+
+.textContent{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gray;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+ 
+}
+.lorem{
+    text-align: center;
+    display: flex;
+
+     
+}
+.im1{
+  width: 100%;
+  border-radius: 90px;
+}
+.im2{
+    width: 100%;
+    border-radius: 90px;
+
+   
+}
+
